@@ -13,3 +13,23 @@
 p{
     margin: 0;
 }
+.pb-row{
+    display: flex;
+    flex-wrap: wrap; /* overflow 的話 wrap可以換行 */
+}
+.pb-col{
+    /* flex-grow | flex-shrink | flex-basis */
+    flex: 1 0 0%; /* 如果有三份的話，大概等於 width: 33.33%（三個區塊分） ，但盡量少用設定絕對的數值 */
+}
+.pb-col-25{
+    width: 25%;
+    flex: 0 0 auto; /* 直接固定幾%  然後 .pb-row 裡面的wrap可以幫助換行 */
+}
+.pb-col-50{
+    width: 50%;
+    flex: 0 0 auto;
+}
+.pb-col-75{
+    width: 75%;
+    flex: 0 0 auto;
+}

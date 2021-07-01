@@ -17,8 +17,8 @@ function createWindow () {
     // win.minimizable = false // 右上角的 - 不見，就是不能變最小（背景）
     // win.closable = false // 關閉按鈕不能按
     // win.menuBarVisible = false; // F12或是 FILE EDIT 會不見 
-    win.setMaximumSize(600, 500);
-    win.setMinimumSize(400, 300);
+    //win.setMaximumSize(600, 500);
+    //win.setMinimumSize(400, 300);
     win.loadFile('index.html')
 }
 
