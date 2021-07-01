@@ -5,13 +5,20 @@ require('electron-reload')(__dirname, {
 });
 function createWindow () {
     const win = new BrowserWindow({
-      width: 800,
-      height: 600,
+      width: 600,
+      height: 400,
       webPreferences: {
         preload: path.join(__dirname, 'preload.js')
       }
     })
-  
+    
+    // win.setResizable(false) // reside
+    // win.maximizable = false // 放大縮小按鈕不能按
+    // win.minimizable = false // 右上角的 - 不見，就是不能變最小（背景）
+    // win.closable = false // 關閉按鈕不能按
+    // win.menuBarVisible = false; // F12或是 FILE EDIT 會不見 
+    win.setMaximumSize(600, 500);
+    win.setMinimumSize(400, 300);
     win.loadFile('index.html')
 }
 
