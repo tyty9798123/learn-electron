@@ -1,0 +1,15 @@
+#left{
+    background-color: red;
+    height: 33.33vh; /* viewport height	 */
+}
+#center{
+    background-color: aqua;
+    height: 33.33vh;
+}
+#right{
+    background-color: cadetblue;
+    height: 33.33vh;
+}
+p{
+    margin: 0;
+}

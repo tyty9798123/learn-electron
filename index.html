@@ -6,12 +6,20 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Hello World!</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./normalize.css">
+
   </head>
   <body>
-    <h1>微笑線上課程</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div id="left">
+      <p>left</p>
+    </div>
+    <div id="center">
+      <p>center</p>
+    </div>
+    <div id="right">
+      <p>right</p>
+    </div>
   </body>
   <script src="./renderer.js" async></script>
 </html>
