@@ -33,3 +33,40 @@ p{
     width: 75%;
     flex: 0 0 auto;
 }
+.pb-col-100{
+    width: 100%;
+    flex: 0 0 auto;
+}
+/* 外面是手機 */
+@media (min-width: 768px) {
+    /*平板*/
+    .pb-col-md-25{
+        width: 25%;
+        flex: 0 0 auto; /* 直接固定幾%  然後 .pb-row 裡面的wrap可以幫助換行 */
+    }
+    .pb-col-md-50{
+        width: 50%;
+        flex: 0 0 auto;
+    }
+    .pb-col-md-75{
+        width: 75%;
+        flex: 0 0 auto;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    /*桌機*/
+    .pb-col-lg-25{
+        width: 25%;
+        flex: 0 0 auto; /* 直接固定幾%  然後 .pb-row 裡面的wrap可以幫助換行 */
+    }
+    .pb-col-lg-50{
+        width: 50%;
+        flex: 0 0 auto;
+    }
+    .pb-col-lg-75{
+        width: 75%;
+        flex: 0 0 auto;
+    }
+}
