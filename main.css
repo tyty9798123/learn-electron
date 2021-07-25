@@ -1,72 +1,36 @@
-#left{
-    background-color: red;
-    height: 33.33vh; /* viewport height	 */
-}
-#center{
-    background-color: aqua;
-    height: 33.33vh;
-}
-#right{
-    background-color: cadetblue;
-    height: 33.33vh;
-}
 p{
     margin: 0;
 }
-.pb-row{
+#main{
     display: flex;
-    flex-wrap: wrap; /* overflow 的話 wrap可以換行 */
 }
-.pb-col{
-    /* flex-grow | flex-shrink | flex-basis */
-    flex: 1 0 0%; /* 如果有三份的話，大概等於 width: 33.33%（三個區塊分） ，但盡量少用設定絕對的數值 */
+#left-menu{
+    background-color: burlywood;
+    height: 100vh;
+    width: 240px;
+    display: flex;
+    transition: width 0.5s;
 }
-.pb-col-25{
-    width: 25%;
-    flex: 0 0 auto; /* 直接固定幾%  然後 .pb-row 裡面的wrap可以幫助換行 */
+#left-menu.closed{ /* 假使在left-menu上使用.closed 則套用 */
+    width: 60px;
 }
-.pb-col-50{
-    width: 50%;
-    flex: 0 0 auto;
+#right-content{
+    background-color: cadetblue;
+    height: 100vh;
+    overflow: scroll;
 }
-.pb-col-75{
-    width: 75%;
-    flex: 0 0 auto;
+#right-content .content{
+    min-width: 804px;
+    white-space: nowrap; /* 不分行 */
 }
-.pb-col-100{
-    width: 100%;
-    flex: 0 0 auto;
+#icon-list{
+    flex-shrink: 0; /* 寬度不變動 字才能直接出來 而不是慢慢出來*/
+    width: 60px;
+    height: 100vh;
 }
-/* 外面是手機 */
-@media (min-width: 768px) {
-    /*平板*/
-    .pb-col-md-25{
-        width: 25%;
-        flex: 0 0 auto; /* 直接固定幾%  然後 .pb-row 裡面的wrap可以幫助換行 */
-    }
-    .pb-col-md-50{
-        width: 50%;
-        flex: 0 0 auto;
-    }
-    .pb-col-md-75{
-        width: 75%;
-        flex: 0 0 auto;
-    }
-}
-
-
-@media (min-width: 1200px) {
-    /*桌機*/
-    .pb-col-lg-25{
-        width: 25%;
-        flex: 0 0 auto; /* 直接固定幾%  然後 .pb-row 裡面的wrap可以幫助換行 */
-    }
-    .pb-col-lg-50{
-        width: 50%;
-        flex: 0 0 auto;
-    }
-    .pb-col-lg-75{
-        width: 75%;
-        flex: 0 0 auto;
-    }
+#function-list{
+    flex-shrink: 0; /* 寬度不變動 字才能直接出來 而不是慢慢出來*/
+    /*width: calc(100% - 60px);*/
+    width: 180px;
+    height: 100vh;
 }
